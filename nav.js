@@ -34,3 +34,26 @@ function updateNavOnLogin() {
   $navLogOut.show();
   $navUserProfile.text(`${currentUser.username}`).show();
 }
+
+function submitNewStory(){
+  hidePageComponents();
+  $createStory.show();
+}
+
+$submit.on("click", submitNewStory);
+
+function favStoriesClick(){
+  hidePageComponents()
+  putFavoritesListOnPage();
+}
+
+// function showFavorites(){
+//   const checked=Array.from($(".checked"))
+//   for (let i of checked){
+//     i.checked=true;
+//   }
+//   hidePageComponents();
+//   $favoritesList.show();
+// }
+
+$favoriteLink.on("click", favStoriesClick);
